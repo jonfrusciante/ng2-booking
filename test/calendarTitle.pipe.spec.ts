@@ -1,11 +1,9 @@
 import {Component} from '@angular/core';
 import {
   inject,
-  async,
   TestComponentBuilder,
   ComponentFixture
 } from '@angular/core/testing';
-import * as moment from 'moment';
 import {expect} from 'chai';
 import {CalendarTitle} from './../ng2-booking';
 

@@ -5,7 +5,6 @@ import {
   Output,
   EventEmitter,
   trigger,
-  state,
   style,
   transition,
   animate
@@ -223,7 +222,7 @@ export class CalendarMonthView implements OnChanges {
     return JSON.stringify(o);
   }
 
-  time(date:any ):string {
+  time(date: any ): string {
     return moment(date).format('LT');
   }
 
@@ -251,7 +250,7 @@ export class CalendarMonthView implements OnChanges {
         this.openDay = this.view.days.find(day => day.date.isSame(moment(this.date).startOf('day')));
         const index: number = this.view.days.indexOf(this.openDay);
         this.openRowIndex = Math.floor(index / 7) * 7;
-        this.selectedEvent = this.openDay.events[0]
+        this.selectedEvent = this.openDay.events[0];
       } else {
         this.openRowIndex = null;
         this.openDay = null;

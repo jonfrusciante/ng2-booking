@@ -14,6 +14,15 @@ describe('calendarMonthView component', () => {
   beforeEach(inject([TestComponentBuilder], (tcb) => {
     builder = tcb;
   }));
+  let testEvents: any[] = [{
+    start: new Date('2016-05-30'),
+    end: new Date('2016-06-02'),
+    cssClass: 'foo',
+    title: 'foo',
+    color: {
+      primary: 'blue'
+    }
+  }];
 
   it('should generate the month view', async(() => {
     builder.createAsync(CalendarMonthView).then((fixture: ComponentFixture<CalendarMonthView>) => {
@@ -39,6 +48,17 @@ describe('calendarMonthView component', () => {
       fixture.componentInstance.ngOnChanges({date: {}, slideBoxIsOpen: {}});
       expect(fixture.componentInstance.openRowIndex).not.to.be.ok;
       expect(fixture.componentInstance.openDay).not.to.be.ok;
+      fixture.destroy();
+    });
+  }));
+  it('should show events in select', async(() => {
+    builder.createAsync(CalendarMonthView).then((fixture: ComponentFixture<CalendarMonthView>) => {
+      fixture.componentInstance.date = moment('2016-06-27').toDate();
+      fixture.componentInstance.events = testEvents;
+      fixture.componentInstance.date = testEvents[0].start;
+      fixture.componentInstance.slideBoxIsOpen = true;
+      fixture.componentInstance.ngOnChanges({date: {}, slideBoxIsOpen: {}});
+      expect(fixture.componentInstance.selectedEvent).to.deep.equal(testEvents[0]);
       fixture.destroy();
     });
   }));
