@@ -22,6 +22,14 @@ describe('calendarMonthView component', () => {
     color: {
       primary: 'blue'
     }
+  }, {
+    start: new Date('2016-05-30'),
+    end: new Date('2016-06-02'),
+    cssClass: 'foo',
+    title: 'foo',
+    color: {
+      primary: 'blue'
+    }
   }];
 
   it('should generate the month view', async(() => {

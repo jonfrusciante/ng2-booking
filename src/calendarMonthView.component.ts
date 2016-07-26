@@ -68,7 +68,7 @@ import {
             <h4>{{openDay.date.format('MMMM D')}}</h4>
             Please select a call: 
             <select class="select" [ngModel]="stringify(selectedEvent)" (ngModelChange)="updateSelectedEvent($event)">
-              <option *ngFor="#e of openDay?.events" [value]=stringify(e) >{{time(e.start)}} : {{e.title}} </option>
+              <option *ngFor="let e of openDay?.events" [value]=stringify(e) >{{time(e.start)}} : {{e.title}} </option>
             </select>
             <div class="btn btn-primary" (click)="book()">Book</div>
 
