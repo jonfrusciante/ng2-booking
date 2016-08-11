@@ -1,6 +1,6 @@
 {
   "name": "ng2-booking",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A calendar component that can display events on a month, week or day view",
   "main": "./ng2-booking.js",
   "typings": "./ng2-booking.d.ts",
@@ -35,11 +35,12 @@
   },
   "homepage": "https://github.com/strategiccoach/ng2-booking#readme",
   "devDependencies": {
-    "@angular/common": "2.0.0-rc.4",
-    "@angular/compiler": "2.0.0-rc.4",
-    "@angular/core": "2.0.0-rc.4",
-    "@angular/platform-browser": "2.0.0-rc.4",
-    "@angular/platform-browser-dynamic": "2.0.0-rc.4",
+    "@angular/common": "2.0.0-rc.5",
+    "@angular/compiler": "2.0.0-rc.5",
+    "@angular/core": "2.0.0-rc.5",
+    "@angular/platform-browser": "2.0.0-rc.5",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.5",
+
     "chai": "~3.5.0",
     "commitizen": "~2.8.1",
     "concurrently": "~2.2.0",
@@ -79,7 +80,7 @@
     "zone.js": "~0.6.12"
   },
   "peerDependencies": {
-    "@angular/core": "2.0.0-rc.4",
+    "@angular/core": "2.0.0-rc.5",
     "moment": "2.x.x"
   },
   "files": [
