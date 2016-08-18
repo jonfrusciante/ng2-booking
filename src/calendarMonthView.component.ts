@@ -50,7 +50,7 @@ import {
               [class.open]="day === openDay"
               (click)="dayClicked.emit({day: day})">
               <div class="cell-top">
-                <span class="day-events-total" *ngIf="day.events.length > 0">{{ day.events.length }}</span>
+                <span class="day-events-total" *ngIf="day.events.length > 0">{{ day.events.length }} available</span>
                 <span class="day-number">{{ day.date.format('D') }}</span>
               </div>
               <div class="events">
