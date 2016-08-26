@@ -1,6 +1,6 @@
 {
   "name": "ng2-booking",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A calendar component that can display events on a month, week or day view",
   "main": "./ng2-booking.js",
   "typings": "./ng2-booking.d.ts",
