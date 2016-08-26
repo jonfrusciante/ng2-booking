@@ -66,7 +66,7 @@ import {
           <div class="slidebox" @collapse *ngIf="openRowIndex === rowIndex && openDay?.events.length > 0">
 
             <h4>{{openDay.date.format('MMMM D')}}</h4>
-            Please select a call: 
+            Please select a time: 
             <select class="select" [ngModel]="stringify(selectedEvent)" (ngModelChange)="updateSelectedEvent($event)">
               <option *ngFor="let e of openDay?.events" [value]=stringify(e) >{{time(e.start)}} : {{e.title}} </option>
             </select>
